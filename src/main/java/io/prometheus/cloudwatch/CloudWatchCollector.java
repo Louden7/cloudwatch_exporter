@@ -725,7 +725,7 @@ public class CloudWatchCollector extends Collector implements Describable {
         final Properties properties = new Properties();
         properties.load(CloudWatchCollector.class.getClassLoader().getResourceAsStream(".properties"));
         String buildVersion = properties.getProperty("BuildVersion");
-        String releaseDate = properties.getProperty("ReleaseDate");
+        String releaseDate = properties.getProperty("maven.build.timestamp.format");
         System.out.println("Old Version: 0.12.4-SNAPSHOT");
         System.out.println("New Version: " + buildVersion);
         System.out.println("Release Date: " + releaseDate);
